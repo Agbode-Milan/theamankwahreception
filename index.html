@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr & Mrs Amankwah Wedding Reception</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #2c4a35 0%, #4a7c59 25%, #e8ede8 75%, #fffef9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        .invitation-card {
+            background: linear-gradient(180deg, #fffef9 0%, #fdfcf5 50%, #f0f5f0 100%);
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in;
+            border: 3px solid;
+            border-image: linear-gradient(135deg, #4a7c59, #6fa87d, #4a7c59) 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .decoration {
+            font-size: 50px;
+            background: linear-gradient(135deg, #4a7c59, #6fa87d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .header {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #5a6c57;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+
+        .couple-name {
+            font-size: 38px;
+            background: linear-gradient(135deg, #2c4a35, #4a7c59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 15px 0;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .reception-text {
+            font-size: 24px;
+            background: linear-gradient(90deg, #4a7c59, #6fa87d, #4a7c59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 15px 0 25px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #4a7c59, #6fa87d, #4a7c59);
+            margin: 25px auto;
+            border-radius: 2px;
+        }
+
+        .countdown-section {
+            background: linear-gradient(135deg, #4a7c59 0%, #5a8c6a 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(74, 124, 89, 0.3);
+        }
+
+        .countdown-title {
+            color: #fffef9;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            font-size: 22px;
+            color: #fffef9;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .details {
+            margin: 30px 0;
+            color: #555;
+        }
+
+        .detail-item {
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #2c4a35;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .map-button {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #4a7c59 0%, #5a8c6a 50%, #6fa87d 100%);
+            color: #fffef9;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .map-button:hover {
+            background: linear-gradient(135deg, #6fa87d 0%, #5a8c6a 50%, #4a7c59 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+        }
+
+        .map-button:active {
+            transform: translateY(0);
+        }
+
+        .rsvp-section {
+            background: linear-gradient(135deg, #f0f5f0 0%, #e8ede8 100%);
+            padding: 25px 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: 2px solid;
+            border-image: linear-gradient(90deg, #d4e5d4, #c8ddc8, #d4e5d4) 1;
+        }
+
+        .rsvp-title {
+            font-size: 18px;
+            color: #2c4a35;
+            margin-bottom: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .contact {
+            margin: 10px 0;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .contact a {
+            color: #4a7c59;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            color: #6fa87d;
+        }
+
+        .invitation-note {
+            margin-top: 25px;
+            font-style: italic;
+            color: #5a6c57;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .invitation-card {
+                padding: 35px 25px;
+                border-radius: 12px;
+            }
+
+            .decoration {
+                font-size: 45px;
+            }
+
+            .header {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+
+            .couple-name {
+                font-size: 32px;
+            }
+
+            .reception-text {
+                font-size: 20px;
+            }
+
+            .countdown {
+                font-size: 18px;
+            }
+
+            .detail-value {
+                font-size: 17px;
+            }
+
+            .map-button {
+                padding: 12px 28px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .rsvp-section {
+                padding: 20px 18px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .invitation-card {
+                padding: 30px 20px;
+            }
+
+            .couple-name {
+                font-size: 28px;
+            }
+
+            .reception-text {
+                font-size: 18px;
+            }
+
+            .countdown {
+                font-size: 16px;
+            }
+
+            .detail-label {
+                font-size: 12px;
+            }
+
+            .detail-value {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="decoration">✦</div>
+        
+        <div class="header">You Are Cordially Invited To The</div>
+        
+        <div class="reception-text">Wedding Reception</div>
+        
+        <div class="header" style="margin-top: 0;">Of</div>
+        
+        <h1 class="couple-name">Mr & Mrs Amankwah</h1>
+        
+        <div class="divider"></div>
+
+        <div class="countdown-section">
+            <div class="countdown-title">Time Until The Big Day</div>
+            <div class="countdown" id="countdown"></div>
+        </div>
+        
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-label">Date</span>
+                <div class="detail-value">Friday, 17th January 2026</div>
+            </div>
+            
+            <div class="detail-item">
+                <span class="detail-label">Time</span>
+                <div class="detail-value">5:00 PM</div>
+            </div>
+            
+            <div class="detail-item">
+                <span class="detail-label">Venue</span>
+                <div class="detail-value">Enclave Gardens<br>East Legon</div>
+                <a href="https://maps.app.goo.gl/EWmfRFZ8Uu6LM8ax5" target="_blank" class="map-button">VIEW MAP</a>
+            </div>
+        </div>
+        
+        <div class="rsvp-section">
+            <div class="rsvp-title">RSVP</div>
+            <div class="contact">Belinda: <a href="tel:0554522001">0554522001</a></div>
+            <div class="contact">Yaw: <a href="tel:0547457885">0547457885</a></div>
+        </div>
+        
+        <div class="invitation-note">*Strictly by Invitation*</div>
+    </div>
+
+    <script>
+        const weddingDate = new Date('2026-01-17T17:00:00').getTime();
+        
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = 'The celebration has begun!';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
